@@ -91,4 +91,4 @@ endforeach()
 #
 # install
 #
-install(TARGETS ${TARGETS} DESTINATION ${CONFIG_DIR_BIN}/plugins)
+install(TARGETS ${TARGETS} DESTINATION ${CONFIG_DIR_LIB}/plugins)
