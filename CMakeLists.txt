@@ -22,9 +22,17 @@ SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules;${CMAKE_MODULE_P
 #
 # Configure paths
 #
-SET(CONFIG_DIR_BIN   bin/)
-SET(CONFIG_DIR_ETC   etc/${PROJECT_NAME}/)
-SET(CONFIG_DIR_LIB   lib/${PROJECT_NAME}/)
+# Relative paths are suffixed to CMAKE_INSTALL_PREFIX
+#
+SET(CONFIG_DIR_BIN   bin/
+	CACHE PATH
+	"Path to install binaries.")
+SET(CONFIG_DIR_ETC   etc/${PROJECT_NAME}/
+	CACHE PATH
+	"Path to install configuration files.")
+SET(CONFIG_DIR_LIB   lib/${PROJECT_NAME}/
+	CACHE PATH
+	"Path to install libraries and plugins")
 IF(WIN32)
   MESSAGE(STATUS "CONFIG_LOCAL is set -- assuming local build")
   SET(CONFIG_DIR_BIN   bin/)
