@@ -1,0 +1,12 @@
+[Unit]
+Description=Custom Minecraft SMP server
+
+[Service]
+ExecStart=/usr/bin/mineserver /etc/mineserver/config.cfg
+User=mineserver
+Group=mineserver
+PIDFile=/var/run/mineserver/mineserver.pid
+
+[Install]
+WantedBy=multi-user.target
+
