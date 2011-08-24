@@ -30,7 +30,7 @@ SET(CONFIG_DIR_BIN   bin/
 SET(CONFIG_DIR_ETC   etc/${PROJECT_NAME}/
 	CACHE PATH
 	"Path to install configuration files.")
-SET(CONFIG_DIR_LIB   lib/${PROJECT_NAME}/
+SET(CONFIG_DIR_LIB   lib${LIB_SUFFIX}/${PROJECT_NAME}/
 	CACHE PATH
 	"Path to install libraries and plugins")
 IF(WIN32)
